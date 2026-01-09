@@ -9,50 +9,52 @@
 
 ## Build Steps
 
-1) Create an OpenAI account
 
-[Link text](https://openai.com/api/)
+1) Create an OpenAI account
+[https://openai.com/api/](https://openai.com/api/)
+
 
 2) Create an API key 
-
 Once logged in:
-[Link text](https://platform.openai.com/api-keys)
+[https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
 
 3) Clone this repo
-
 ```bash
 git clone https://github.com/obj809/openai-api-connection
+```
+```bash
 cd openai-api-connection
 ```
 
-4) Create venv
 
+4) Create venv
 ```bash
 python -m venv venv
 ```
 
-5) Activate venv
 
+5) Activate venv
 macOS / Linux
 ```bash
 source venv/bin/activate
 ```
-
 Windows (PowerShell)
 ```powershell
 venv\Scripts\Activate.ps1
 ```
 
-5) Install requirements.txt 
 
+5) Install requirements.txt 
 ```bash
 pip install -r requirements.txt
 ```
 
+
 (Optional) Edit the prompt value in prompts.py
 
-6) Run main.py
 
+6) Run main.py
 ```bash
 python main.py
 ```
@@ -60,4 +62,4 @@ python main.py
 
 # Links
 
-[Link text](https://platform.openai.com/docs/quickstart?language=python)
+[https://platform.openai.com/docs/quickstart?language=python](https://platform.openai.com/docs/quickstart?language=python)
