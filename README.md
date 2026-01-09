@@ -7,7 +7,7 @@
 
 ## Code
 
-```bash
+```python
 
 from dotenv import load_dotenv
 import os
