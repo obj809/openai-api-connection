@@ -1,4 +1,6 @@
-# Python Quickstart: Getting Started with the OpenAI API
+# How to Guide: OpenAI API Connection
+
+## Python Quickstart: Getting Started with the OpenAI API
 
 ## Requirements
 - Python 3.10+
