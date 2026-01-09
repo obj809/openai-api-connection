@@ -1,11 +1,9 @@
 # How to Guide: OpenAI API Connection
 
-## A quickstart guide to help developers connect to the OpenAI API.
+## Python Quickstart: Getting Started with the OpenAI API
 
 ## Requirements
 - Python 3.10+
-
-## Code
 
 ```python
 
