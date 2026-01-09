@@ -1,3 +1,4 @@
 .env
 venv
 commands.md
+__pycache__
