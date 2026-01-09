@@ -1,5 +1,3 @@
-# openai-api-connection
-
 # How to Guide: OpenAI API Connection
 
 ## Description: A quickstart guide to assist developers connect with the OpenAI API.
@@ -51,10 +49,10 @@ pip install -r requirements.txt
 ```
 
 
-(Optional) Edit the prompt value in prompts.py
+6. (Optional) Edit the prompt value in prompts.py
 
 
-6) Run main.py
+7) Run main.py
 ```bash
 python main.py
 ```
