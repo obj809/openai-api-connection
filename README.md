@@ -5,6 +5,31 @@
 ## Requirements
 - Python 3.10+
 
+## Code
+
+```bash
+
+from dotenv import load_dotenv
+import os
+from openai import OpenAI
+from prompts import prompt
+
+load_dotenv()
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise RuntimeError("OPENAI_API_KEY not set")
+
+client = OpenAI(api_key=openai_api_key)
+
+response = client.responses.create(
+    model="gpt-5-nano",
+    input=prompt
+)
+
+print(response.output_text)
+```
+
 ## Build Steps
 
 
@@ -55,29 +80,6 @@ pip install -r requirements.txt
 7) Run main.py
 ```bash
 python main.py
-```
-
-```python
-
-from dotenv import load_dotenv
-import os
-from openai import OpenAI
-from prompts import prompt
-
-load_dotenv()
-
-openai_api_key = os.getenv("OPENAI_API_KEY")
-if not openai_api_key:
-    raise RuntimeError("OPENAI_API_KEY not set")
-
-client = OpenAI(api_key=openai_api_key)
-
-response = client.responses.create(
-    model="gpt-5-nano",
-    input=prompt
-)
-
-print(response.output_text)
 ```
 
 
