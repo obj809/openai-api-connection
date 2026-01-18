@@ -11,12 +11,13 @@ if not openai_api_key:
     raise RuntimeError("OPENAI_API_KEY not set")
 
 MODEL = "gpt-5-nano"
+PROMPT = "Write a one-sentence bedtime story about a dragon who is afraid of the dark."
 
 client = OpenAI(api_key=openai_api_key)
 
 response = client.responses.create(
     model=MODEL,
-    input="Write a one-sentence bedtime story about a dragon who is afraid of the dark."
+    input=PROMPT
 )
 
 print(response.output_text)
