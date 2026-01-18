@@ -1,9 +1,8 @@
 # main.py
 
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
-from prompts import prompt
 
 load_dotenv()
 
@@ -11,11 +10,13 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     raise RuntimeError("OPENAI_API_KEY not set")
 
+MODEL = "gpt-5-nano"
+
 client = OpenAI(api_key=openai_api_key)
 
 response = client.responses.create(
-    model="gpt-5-nano",
-    input=prompt
+    model=MODEL,
+    input="Write a one-sentence bedtime story about a dragon who is afraid of the dark."
 )
 
 print(response.output_text)

@@ -6,16 +6,15 @@ A Python quickstart guide for getting started with the OpenAI API.
 
 ## Requirements
 - Python 3.10+
+- An OpenAI API key
 
 ## main.py
 
 ```python
 
-
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
-from prompts import prompt
 
 load_dotenv()
 
@@ -23,11 +22,13 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     raise RuntimeError("OPENAI_API_KEY not set")
 
+MODEL = "gpt-5-nano"
+
 client = OpenAI(api_key=openai_api_key)
 
 response = client.responses.create(
-    model="gpt-5-nano",
-    input=prompt
+    model=MODEL,
+    input="Write a one-sentence bedtime story about a dragon who is afraid of the dark."
 )
 
 print(response.output_text)
@@ -40,7 +41,7 @@ print(response.output_text)
 [https://openai.com/api/](https://openai.com/api/)
 
 
-2) Create an API key 
+2) Create an OpenAI API key
 Once logged in:
 [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 
@@ -54,13 +55,13 @@ cd openai-api-connection
 ```
 
 
-4) Create venv
+4) Create a virtual environment
 ```bash
 python -m venv venv
 ```
 
 
-5) Activate venv
+5) Activate the virtual environment
 macOS / Linux
 ```bash
 source venv/bin/activate
@@ -71,21 +72,30 @@ venv\Scripts\Activate.ps1
 ```
 
 
-5) Install requirements.txt 
+6) Install requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+Minimum dependencies:
+```bash
+pip install openai python-dotenv
+```
 
-6. (Optional) Edit the prompt value in prompts.py
+
+7) Create a .env file in the project root
+
+OPENAI_API_KEY=your_api_key_here
 
 
-7) Run main.py
+8) Run main.py
 ```bash
 python main.py
 ```
 
 
-# Links
+## Links
 
-[https://platform.openai.com/docs/quickstart?language=python](https://platform.openai.com/docs/quickstart?language=python)
+- [OpenAI API Models](https://platform.openai.com/docs/models)
+
+- [OpenAI API Quickstart](https://platform.openai.com/docs/quickstart?language=python)
